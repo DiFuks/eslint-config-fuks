@@ -2,6 +2,10 @@
 
 ---
 
+<a href="https://www.npmjs.com/package/eslint-config-fuks">npm</a>
+
+<a href="https://github.com/DiFuks/eslint-config-fuks">GitHub</a>
+
 ## Installing
 
 ---
