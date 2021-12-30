@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-fuks",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "index.js",
   "author": "Dmitry Fuks",
   "license": "ISC",
