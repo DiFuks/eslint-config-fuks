@@ -5,6 +5,7 @@
   "author": "Dmitry Fuks",
   "license": "ISC",
   "repository": "https://github.com/DiFuks/eslint-config-fuks",
+  "keywords": ["eslint"],
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.8.1",
     "@typescript-eslint/parser": "^5.8.1",

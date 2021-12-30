@@ -14,7 +14,7 @@
 npm i eslint-config-fuks -D
 ```
 
-###.eslintrc
+### .eslintrc
 
 ```json
 {
