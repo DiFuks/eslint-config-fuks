@@ -1,5 +1,5 @@
 .idea
-eslintrc.js
+.eslintrc
 package.json
 tsconfig.json
 yarn.lock

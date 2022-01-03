@@ -1,20 +1,25 @@
 {
   "name": "eslint-config-fuks",
-  "version": "1.0.7",
+  "version": "1.1.4",
   "main": "index.js",
   "author": "Dmitry Fuks",
   "license": "ISC",
   "repository": "https://github.com/DiFuks/eslint-config-fuks",
-  "keywords": ["eslint"],
+  "keywords": [
+    "eslint"
+  ],
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.8.1",
     "@typescript-eslint/parser": "^5.8.1",
+    "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^16.1.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-typescript": "^2.5.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jsdoc": "^37.2.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-mdx": "^1.16.0",
     "eslint-plugin-no-relative-imports": "github:MatthewBurstein/eslint-plugin-no-relative-imports",
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "eslint-plugin-prettier": "^4.0.0",
