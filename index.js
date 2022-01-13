@@ -47,6 +47,7 @@ module.exports = {
   rules: {
     'import/no-unresolved': 'error',
     'prefer-arrow/prefer-arrow-functions': 'error',
+    'no-shadow': ['error', { builtinGlobals: true }],
     'prettier/prettier': [
       'error',
       {
@@ -92,7 +93,8 @@ module.exports = {
       {
         groups: [
           ['external', 'builtin'],
-          ['index', 'sibling', 'internal', 'parent'],
+          ['internal', 'parent'],
+          ['index', 'sibling'],
         ],
         'newlines-between': 'always',
       },
@@ -228,6 +230,10 @@ module.exports = {
             },
             format: ['PascalCase'],
             selector: ['interface'],
+          },
+          {
+            selector: 'variable',
+            format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
           },
           {
             custom: {
