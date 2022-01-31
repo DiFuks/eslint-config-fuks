@@ -23,7 +23,6 @@ module.exports = {
     'plugin:sonarjs/recommended',
     'airbnb',
     'airbnb/hooks',
-    'airbnb-typescript',
     'plugin:unicorn/recommended',
     'plugin:prettier/recommended',
   ],
@@ -187,6 +186,7 @@ module.exports = {
     {
       files: ['*.ts', '*.tsx'],
       extends: [
+        'airbnb-typescript',
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/eslint-recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
