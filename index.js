@@ -17,7 +17,6 @@ module.exports = {
     'no-relative-imports',
   ],
   extends: [
-    'eslint:recommended',
     'plugin:eslint-comments/recommended',
     'plugin:promise/recommended',
     'plugin:sonarjs/recommended',
@@ -25,6 +24,10 @@ module.exports = {
     'airbnb/hooks',
     'plugin:unicorn/recommended',
     'plugin:prettier/recommended',
+    'airbnb-typescript',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'prettier',
   ],
   settings: {
     'import/parsers': {
@@ -40,7 +43,6 @@ module.exports = {
   rules: {
     'import/no-unresolved': 'error',
     'prefer-arrow/prefer-arrow-functions': 'error',
-    'no-shadow': ['error', { builtinGlobals: true }],
     'prettier/prettier': [
       'error',
       {
@@ -181,14 +183,51 @@ module.exports = {
         publicOnly: true,
       },
     ],
+
+    '@typescript-eslint/naming-convention': [
+      'error',
+      {
+        custom: {
+          match: true,
+          regex: '^I[A-Z]',
+        },
+        format: ['PascalCase'],
+        selector: ['interface'],
+      },
+      {
+        selector: 'variable',
+        format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+      },
+      {
+        custom: {
+          match: true,
+          regex: '^[TI][A-Z]',
+        },
+        format: ['PascalCase'],
+        selector: ['typeAlias'],
+      },
+    ],
+    '@typescript-eslint/no-floating-promises': [
+      'error',
+      {
+        ignoreIIFE: true,
+        ignoreVoid: true,
+      },
+    ],
+    '@typescript-eslint/no-shadow': [
+      'error',
+      {
+        allow: ['name'],
+      },
+    ],
+    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/no-unsafe-assignment': 'off',
+    '@typescript-eslint/no-use-before-define': 'off',
   },
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
       extends: [
-        'airbnb-typescript',
-        'plugin:@typescript-eslint/recommended',
-        'plugin:@typescript-eslint/eslint-recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
       ],
       rules: {
@@ -215,39 +254,6 @@ module.exports = {
           },
         ],
         '@typescript-eslint/method-signature-style': ['error', 'property'],
-        '@typescript-eslint/naming-convention': [
-          'error',
-          {
-            custom: {
-              match: true,
-              regex: '^I[A-Z]',
-            },
-            format: ['PascalCase'],
-            selector: ['interface'],
-          },
-          {
-            selector: 'variable',
-            format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
-          },
-          {
-            custom: {
-              match: true,
-              regex: '^[TI][A-Z]',
-            },
-            format: ['PascalCase'],
-            selector: ['typeAlias'],
-          },
-        ],
-        '@typescript-eslint/no-floating-promises': [
-          'error',
-          {
-            ignoreIIFE: true,
-            ignoreVoid: true,
-          },
-        ],
-        '@typescript-eslint/no-unused-vars': 'error',
-        '@typescript-eslint/no-unsafe-assignment': 'off',
-        '@typescript-eslint/no-use-before-define': 'off',
         '@typescript-eslint/member-ordering': [
           'error',
           {
@@ -287,6 +293,7 @@ module.exports = {
       files: ['*.js'],
       rules: {
         'unicorn/prefer-module': 'off',
+        '@typescript-eslint/no-var-requires': 'off',
       },
     },
     {
@@ -327,6 +334,7 @@ module.exports = {
           },
         ],
         '@typescript-eslint/no-use-before-define': 'off',
+        '@typescript-eslint/no-floating-promises': 'off',
       },
     },
   ],
