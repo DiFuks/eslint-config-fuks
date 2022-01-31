@@ -338,5 +338,21 @@ module.exports = {
         '@typescript-eslint/no-floating-promises': 'off',
       },
     },
+    {
+      files: ['*.json'],
+      parserOptions: {
+        project: false,
+        sourceType: 'module',
+      },
+      rules: {
+        '@typescript-eslint/no-floating-promises': 'off',
+        '@typescript-eslint/dot-notation': 'off',
+        '@typescript-eslint/no-throw-literal': 'off',
+        '@typescript-eslint/no-implied-eval': 'off',
+        '@typescript-eslint/return-await': 'off',
+        '@typescript-eslint/no-unused-expressions': 'off',
+        quotes: 'off',
+      },
+    },
   ],
 };
