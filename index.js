@@ -254,6 +254,7 @@ module.exports = {
           },
         ],
         '@typescript-eslint/method-signature-style': ['error', 'property'],
+        '@typescript-eslint/prefer-readonly': 'error',
         '@typescript-eslint/member-ordering': [
           'error',
           {
