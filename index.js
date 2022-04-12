@@ -291,7 +291,7 @@ module.exports = {
       },
     },
     {
-      files: ['*.js'],
+      files: ['*.js', '*.mjs', '*.cjs'],
       rules: {
         'unicorn/prefer-module': 'off',
         '@typescript-eslint/no-var-requires': 'off',
