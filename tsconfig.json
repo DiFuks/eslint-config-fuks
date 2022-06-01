@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "target": "es2016",
+    "target": "esnext",
     "module": "commonjs",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -9,6 +9,13 @@
     "allowJs": true,
     "skipLibCheck": true,
     "moduleResolution": "node",
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noUncheckedIndexedAccess": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "noImplicitOverride": true
   }
 }

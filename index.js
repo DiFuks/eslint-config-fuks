@@ -34,7 +34,7 @@ module.exports = {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
     'import/resolver': {
-      typescript: {},
+      [require.resolve('eslint-import-resolver-typescript')]: true,
     },
     react: {
       version: 'detect',
@@ -51,7 +51,8 @@ module.exports = {
         jsxSingleQuote: true,
         tabWidth: 2,
         jsdocSingleLineComment: false,
-        plugins: ['prettier-plugin-jsdoc'],
+        // eslint-disable-next-line global-require
+        plugins: [require('prettier-plugin-jsdoc')],
       },
       { usePrettierrc: false },
     ],
@@ -125,6 +126,13 @@ module.exports = {
         allowAsStatement: true,
       },
     ],
+    'no-restricted-syntax': [
+      'error',
+      'ForInStatement',
+      'LabeledStatement',
+      'WithStatement',
+    ],
+    'no-await-in-loop': ['off'],
     'promise/prefer-await-to-then': 'error',
     quotes: [
       'error',
@@ -220,9 +228,13 @@ module.exports = {
         allow: ['name'],
       },
     ],
-    '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/no-unsafe-assignment': 'off',
     '@typescript-eslint/no-use-before-define': 'off',
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      { argsIgnorePattern: '^_', ignoreRestSiblings: true },
+    ],
+    '@typescript-eslint/no-unnecessary-condition': ['error'],
   },
   overrides: [
     {
@@ -345,13 +357,24 @@ module.exports = {
         sourceType: 'module',
       },
       rules: {
+        '@typescript-eslint/no-unnecessary-condition': ['off'],
         '@typescript-eslint/no-floating-promises': 'off',
         '@typescript-eslint/dot-notation': 'off',
         '@typescript-eslint/no-throw-literal': 'off',
         '@typescript-eslint/no-implied-eval': 'off',
         '@typescript-eslint/return-await': 'off',
         '@typescript-eslint/no-unused-expressions': 'off',
+        'sonarjs/no-duplicate-string': ['off'],
+        'unicorn/numeric-separators-style': ['off'],
         quotes: 'off',
+      },
+    },
+    {
+      files: ['*.spec.ts'],
+      rules: {
+        '@typescript-eslint/no-unsafe-assignment': ['off'],
+        '@typescript-eslint/no-unsafe-member-access': ['off'],
+        'sonarjs/no-duplicate-string': ['off'],
       },
     },
   ],
