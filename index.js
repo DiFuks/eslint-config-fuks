@@ -15,6 +15,7 @@ module.exports = {
     'styled-components-varname',
     'jsdoc',
     'no-relative-imports',
+    'i18next',
   ],
   extends: [
     'plugin:eslint-comments/recommended',
@@ -27,6 +28,7 @@ module.exports = {
     'airbnb-typescript',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:i18next/recommended',
     'prettier',
   ],
   settings: {
