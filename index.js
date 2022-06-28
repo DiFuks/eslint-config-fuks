@@ -134,7 +134,7 @@ module.exports = {
       'LabeledStatement',
       'WithStatement',
     ],
-    'no-await-in-loop': ['off'],
+    'no-await-in-loop': 'off',
     'promise/prefer-await-to-then': 'error',
     quotes: [
       'error',
@@ -173,7 +173,7 @@ module.exports = {
         newlineBeforeCapsAssumesBadSentenceEnd: true,
       },
     ],
-    'jsdoc/require-throws': 'error',
+    'jsdoc/require-throws': 'off',
     'jsdoc/require-jsdoc': [
       'error',
       {
@@ -185,7 +185,7 @@ module.exports = {
           'TSEnumDeclaration',
           'TSMethodSignature',
           'ExportDefaultDeclaration',
-          'ExportNamedDeclaration[declaration.declarations.0.id.name!="getServerSideProps"][declaration.type!="ClassDeclaration"]',
+          'ExportNamedDeclaration[declaration][declaration.declarations.0.id.name!="getServerSideProps"][declaration.type!="ClassDeclaration"]',
           'PropertyDefinition:not([accessibility="private"])',
           'MethodDefinition:not([accessibility="private"])',
           'ClassProperty:not([accessibility="private"])',
@@ -193,7 +193,6 @@ module.exports = {
         publicOnly: true,
       },
     ],
-
     '@typescript-eslint/naming-convention': [
       'error',
       {
@@ -302,6 +301,14 @@ module.exports = {
             ],
           },
         ],
+        '@typescript-eslint/no-misused-promises': [
+          'error',
+          {
+            checksVoidReturn: {
+              attributes: false,
+            },
+          },
+        ],
       },
     },
     {
@@ -359,24 +366,34 @@ module.exports = {
         sourceType: 'module',
       },
       rules: {
-        '@typescript-eslint/no-unnecessary-condition': ['off'],
+        '@typescript-eslint/no-unnecessary-condition': 'off',
         '@typescript-eslint/no-floating-promises': 'off',
         '@typescript-eslint/dot-notation': 'off',
         '@typescript-eslint/no-throw-literal': 'off',
         '@typescript-eslint/no-implied-eval': 'off',
         '@typescript-eslint/return-await': 'off',
         '@typescript-eslint/no-unused-expressions': 'off',
-        'sonarjs/no-duplicate-string': ['off'],
-        'unicorn/numeric-separators-style': ['off'],
+        'sonarjs/no-duplicate-string': 'off',
+        'unicorn/numeric-separators-style': 'off',
+        'unicorn/filename-case': 'off',
         quotes: 'off',
       },
     },
     {
       files: ['*.spec.ts'],
       rules: {
-        '@typescript-eslint/no-unsafe-assignment': ['off'],
-        '@typescript-eslint/no-unsafe-member-access': ['off'],
-        'sonarjs/no-duplicate-string': ['off'],
+        '@typescript-eslint/no-unsafe-assignment': 'off',
+        '@typescript-eslint/no-unsafe-member-access': 'off',
+        'sonarjs/no-duplicate-string': 'off',
+      },
+    },
+    {
+      files: ['*.fixture.tsx'],
+      rules: {
+        'react/function-component-definition': ['off'],
+        '@typescript-eslint/explicit-module-boundary-types': ['off'],
+        '@typescript-eslint/explicit-function-return-type': ['off'],
+        'jsdoc/require-jsdoc': ['off'],
       },
     },
   ],
