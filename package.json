@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-fuks",
-  "version": "1.6.7",
+  "version": "1.6.8",
   "main": "index.js",
   "author": "Dmitry Fuks",
   "license": "ISC",
@@ -14,8 +14,8 @@
     "typescript": "^4.6.3"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.8.1",
-    "@typescript-eslint/parser": "^5.8.1",
+    "@typescript-eslint/eslint-plugin": "^5.30.0",
+    "@typescript-eslint/parser": "^5.30.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^16.1.0",
     "eslint-config-prettier": "^8.3.0",

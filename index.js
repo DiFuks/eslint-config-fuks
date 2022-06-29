@@ -236,6 +236,14 @@ module.exports = {
       { argsIgnorePattern: '^_', ignoreRestSiblings: true },
     ],
     '@typescript-eslint/no-unnecessary-condition': ['error'],
+    'jsx-a11y/anchor-is-valid': [
+      'error',
+      {
+        components: [],
+        specialLink: ['hrefLeft', 'hrefRight'],
+        aspects: ['noHref', 'invalidHref', 'preferButton'],
+      },
+    ],
   },
   overrides: [
     {
@@ -394,6 +402,7 @@ module.exports = {
         '@typescript-eslint/explicit-module-boundary-types': ['off'],
         '@typescript-eslint/explicit-function-return-type': ['off'],
         'jsdoc/require-jsdoc': ['off'],
+        'i18next/no-literal-string': ['off'],
       },
     },
   ],
