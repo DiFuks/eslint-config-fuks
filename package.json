@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-fuks",
-  "version": "1.7.3",
+  "version": "1.7.4",
   "main": "index.js",
   "author": "Dmitry Fuks",
   "license": "ISC",
@@ -8,7 +8,8 @@
   "files": [
     "index.js",
     "readme.md",
-    "resolver.js"
+    "resolver.js",
+    "tsconfig.json"
   ],
   "keywords": [
     "eslint"
