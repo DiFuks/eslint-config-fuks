@@ -6,10 +6,6 @@ module.exports = {
     node: true,
   },
   parser: '@typescript-eslint/parser',
-  parserOptions: {
-    project: './tsconfig.json',
-    sourceType: 'module',
-  },
   plugins: [
     'prefer-arrow',
     'styled-components-varname',
@@ -335,10 +331,6 @@ module.exports = {
     {
       files: ['*.mdx'],
       extends: ['plugin:mdx/recommended'],
-      parserOptions: {
-        project: false,
-        sourceType: 'module',
-      },
       rules: {
         '@typescript-eslint/dot-notation': 'off',
         '@typescript-eslint/naming-convention': 'off',
@@ -369,10 +361,6 @@ module.exports = {
     },
     {
       files: ['*.json'],
-      parserOptions: {
-        project: false,
-        sourceType: 'module',
-      },
       rules: {
         '@typescript-eslint/no-unnecessary-condition': 'off',
         '@typescript-eslint/no-floating-promises': 'off',

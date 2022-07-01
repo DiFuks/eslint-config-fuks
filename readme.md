@@ -39,39 +39,33 @@ module.exports = {
     node: true,
   },
   parser: '@typescript-eslint/parser',
-  parserOptions: {
-    project: './tsconfig.json',
-    sourceType: 'module',
-  },
   plugins: [
     'prefer-arrow',
     'styled-components-varname',
     'jsdoc',
     'no-relative-imports',
+    'i18next',
   ],
   extends: [
-    'eslint:recommended',
     'plugin:eslint-comments/recommended',
-    'plugin:import/recommended',
-    'plugin:import/errors',
-    'plugin:import/warnings',
-    'plugin:import/typescript',
-    'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
     'plugin:promise/recommended',
     'plugin:sonarjs/recommended',
     'airbnb',
     'airbnb/hooks',
-    'airbnb-typescript',
     'plugin:unicorn/recommended',
     'plugin:prettier/recommended',
+    'airbnb-typescript',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:i18next/recommended',
+    'prettier',
   ],
   settings: {
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
     'import/resolver': {
-      typescript: {},
+      [require.resolve('eslint-import-resolver-typescript')]: true,
     },
     react: {
       version: 'detect',
@@ -88,7 +82,8 @@ module.exports = {
         jsxSingleQuote: true,
         tabWidth: 2,
         jsdocSingleLineComment: false,
-        plugins: ['prettier-plugin-jsdoc'],
+        // eslint-disable-next-line global-require
+        plugins: [require('prettier-plugin-jsdoc')],
       },
       { usePrettierrc: false },
     ],
@@ -125,7 +120,8 @@ module.exports = {
       {
         groups: [
           ['external', 'builtin'],
-          ['index', 'sibling', 'internal', 'parent'],
+          ['internal', 'parent'],
+          ['index', 'sibling'],
         ],
         'newlines-between': 'always',
       },
@@ -161,6 +157,13 @@ module.exports = {
         allowAsStatement: true,
       },
     ],
+    'no-restricted-syntax': [
+      'error',
+      'ForInStatement',
+      'LabeledStatement',
+      'WithStatement',
+    ],
+    'no-await-in-loop': 'off',
     'promise/prefer-await-to-then': 'error',
     quotes: [
       'error',
@@ -199,7 +202,7 @@ module.exports = {
         newlineBeforeCapsAssumesBadSentenceEnd: true,
       },
     ],
-    'jsdoc/require-throws': 'error',
+    'jsdoc/require-throws': 'off',
     'jsdoc/require-jsdoc': [
       'error',
       {
@@ -211,7 +214,7 @@ module.exports = {
           'TSEnumDeclaration',
           'TSMethodSignature',
           'ExportDefaultDeclaration',
-          'ExportNamedDeclaration[declaration.declarations.0.id.name!="getServerSideProps"][declaration.type!="ClassDeclaration"]',
+          'ExportNamedDeclaration[declaration][declaration.declarations.0.id.name!="getServerSideProps"][declaration.type!="ClassDeclaration"]',
           'PropertyDefinition:not([accessibility="private"])',
           'MethodDefinition:not([accessibility="private"])',
           'ClassProperty:not([accessibility="private"])',
@@ -219,13 +222,62 @@ module.exports = {
         publicOnly: true,
       },
     ],
+    '@typescript-eslint/naming-convention': [
+      'error',
+      {
+        custom: {
+          match: true,
+          regex: '^I[A-Z]',
+        },
+        format: ['PascalCase'],
+        selector: ['interface'],
+      },
+      {
+        selector: 'variable',
+        format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+      },
+      {
+        custom: {
+          match: true,
+          regex: '^[TI][A-Z]',
+        },
+        format: ['PascalCase'],
+        selector: ['typeAlias'],
+      },
+    ],
+    '@typescript-eslint/no-floating-promises': [
+      'error',
+      {
+        ignoreIIFE: true,
+        ignoreVoid: true,
+      },
+    ],
+    '@typescript-eslint/no-shadow': [
+      'error',
+      {
+        allow: ['name'],
+      },
+    ],
+    '@typescript-eslint/no-unsafe-assignment': 'off',
+    '@typescript-eslint/no-use-before-define': 'off',
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      { argsIgnorePattern: '^_', ignoreRestSiblings: true },
+    ],
+    '@typescript-eslint/no-unnecessary-condition': ['error'],
+    'jsx-a11y/anchor-is-valid': [
+      'error',
+      {
+        components: [],
+        specialLink: ['hrefLeft', 'hrefRight'],
+        aspects: ['noHref', 'invalidHref', 'preferButton'],
+      },
+    ],
   },
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
       extends: [
-        'plugin:@typescript-eslint/recommended',
-        'plugin:@typescript-eslint/eslint-recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
       ],
       rules: {
@@ -252,35 +304,7 @@ module.exports = {
           },
         ],
         '@typescript-eslint/method-signature-style': ['error', 'property'],
-        '@typescript-eslint/naming-convention': [
-          'error',
-          {
-            custom: {
-              match: true,
-              regex: '^I[A-Z]',
-            },
-            format: ['PascalCase'],
-            selector: ['interface'],
-          },
-          {
-            custom: {
-              match: true,
-              regex: '^[TI][A-Z]',
-            },
-            format: ['PascalCase'],
-            selector: ['typeAlias'],
-          },
-        ],
-        '@typescript-eslint/no-floating-promises': [
-          'error',
-          {
-            ignoreIIFE: true,
-            ignoreVoid: true,
-          },
-        ],
-        '@typescript-eslint/no-unused-vars': 'error',
-        '@typescript-eslint/no-unsafe-assignment': 'off',
-        '@typescript-eslint/no-use-before-define': 'off',
+        '@typescript-eslint/prefer-readonly': 'error',
         '@typescript-eslint/member-ordering': [
           'error',
           {
@@ -314,12 +338,21 @@ module.exports = {
             ],
           },
         ],
+        '@typescript-eslint/no-misused-promises': [
+          'error',
+          {
+            checksVoidReturn: {
+              attributes: false,
+            },
+          },
+        ],
       },
     },
     {
-      files: ['*.js'],
+      files: ['*.js', '*.mjs', '*.cjs'],
       rules: {
         'unicorn/prefer-module': 'off',
+        '@typescript-eslint/no-var-requires': 'off',
       },
     },
     {
@@ -331,10 +364,6 @@ module.exports = {
     {
       files: ['*.mdx'],
       extends: ['plugin:mdx/recommended'],
-      parserOptions: {
-        project: false,
-        sourceType: 'module',
-      },
       rules: {
         '@typescript-eslint/dot-notation': 'off',
         '@typescript-eslint/naming-convention': 'off',
@@ -360,6 +389,41 @@ module.exports = {
           },
         ],
         '@typescript-eslint/no-use-before-define': 'off',
+        '@typescript-eslint/no-floating-promises': 'off',
+      },
+    },
+    {
+      files: ['*.json'],
+      rules: {
+        '@typescript-eslint/no-unnecessary-condition': 'off',
+        '@typescript-eslint/no-floating-promises': 'off',
+        '@typescript-eslint/dot-notation': 'off',
+        '@typescript-eslint/no-throw-literal': 'off',
+        '@typescript-eslint/no-implied-eval': 'off',
+        '@typescript-eslint/return-await': 'off',
+        '@typescript-eslint/no-unused-expressions': 'off',
+        'sonarjs/no-duplicate-string': 'off',
+        'unicorn/numeric-separators-style': 'off',
+        'unicorn/filename-case': 'off',
+        quotes: 'off',
+      },
+    },
+    {
+      files: ['*.spec.ts'],
+      rules: {
+        '@typescript-eslint/no-unsafe-assignment': 'off',
+        '@typescript-eslint/no-unsafe-member-access': 'off',
+        'sonarjs/no-duplicate-string': 'off',
+      },
+    },
+    {
+      files: ['*.fixture.tsx'],
+      rules: {
+        'react/function-component-definition': ['off'],
+        '@typescript-eslint/explicit-module-boundary-types': ['off'],
+        '@typescript-eslint/explicit-function-return-type': ['off'],
+        'jsdoc/require-jsdoc': ['off'],
+        'i18next/no-literal-string': ['off'],
       },
     },
   ],

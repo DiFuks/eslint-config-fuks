@@ -1,3 +1,16 @@
 {
-  "extends": "./index.js"
+  "extends": "./index.js",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "sourceType": "module"
+  },
+  "overrides": [
+    {
+      "files": ["*.json"],
+      "parserOptions": {
+        "project": false,
+        "sourceType": "module"
+      }
+    }
+  ]
 }
