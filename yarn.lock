@@ -432,20 +432,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pkgr/utils@npm:^2.2.0":
-  version: 2.2.0
-  resolution: "@pkgr/utils@npm:2.2.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2F%40pkgr%2Futils%2F-%2Futils-2.2.0.tgz"
-  dependencies:
-    cross-spawn: ^7.0.3
-    is-glob: ^4.0.3
-    open: ^8.4.0
-    picocolors: ^1.0.0
-    tiny-glob: ^0.2.9
-    tslib: ^2.4.0
-  checksum: 0ae76a6b92ca581388cedb8433bd5becdab2b226781d1ff4fafa30104c2f8e3227d982f39f66f7109df95122491973af8335f15e82818dc346ec6ae1a36e63bf
-  languageName: node
-  linkType: hard
-
 "@types/debug@npm:^4.0.0":
   version: 4.1.7
   resolution: "@types/debug@npm:4.1.7"
@@ -1003,17 +989,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cross-spawn@npm:^7.0.3":
-  version: 7.0.3
-  resolution: "cross-spawn@npm:7.0.3::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fcross-spawn%2F-%2Fcross-spawn-7.0.3.tgz"
-  dependencies:
-    path-key: ^3.1.0
-    shebang-command: ^2.0.0
-    which: ^2.0.1
-  checksum: 671cc7c7288c3a8406f3c69a3ae2fc85555c04169e9d611def9a675635472614f1c0ed0ef80955d5b6d4e724f6ced67f0ad1bb006c2ea643488fcfef994d7f52
-  languageName: node
-  linkType: hard
-
 "damerau-levenshtein@npm:^1.0.8":
   version: 1.0.8
   resolution: "damerau-levenshtein@npm:1.0.8::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fdamerau-levenshtein%2F-%2Fdamerau-levenshtein-1.0.8.tgz"
@@ -1079,13 +1054,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"define-lazy-prop@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "define-lazy-prop@npm:2.0.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fdefine-lazy-prop%2F-%2Fdefine-lazy-prop-2.0.0.tgz"
-  checksum: 0115fdb065e0490918ba271d7339c42453d209d4cb619dfe635870d906731eff3e1ade8028bb461ea27ce8264ec5e22c6980612d332895977e89c1bbc80fcee2
-  languageName: node
-  linkType: hard
-
 "define-properties@npm:^1.1.3, define-properties@npm:^1.1.4":
   version: 1.1.4
   resolution: "define-properties@npm:1.1.4"
@@ -1141,16 +1109,6 @@ __metadata:
   version: 9.2.2
   resolution: "emoji-regex@npm:9.2.2"
   checksum: 8487182da74aabd810ac6d6f1994111dfc0e331b01271ae01ec1eb0ad7b5ecc2bbbbd2f053c05cb55a1ac30449527d819bbfbf0e3de1023db308cbcb47f86601
-  languageName: node
-  linkType: hard
-
-"enhanced-resolve@npm:^5.10.0":
-  version: 5.10.0
-  resolution: "enhanced-resolve@npm:5.10.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fenhanced-resolve%2F-%2Fenhanced-resolve-5.10.0.tgz"
-  dependencies:
-    graceful-fs: ^4.2.4
-    tapable: ^2.2.0
-  checksum: 0bb9830704db271610f900e8d79d70a740ea16f251263362b0c91af545576d09fe50103496606c1300a05e588372d6f9780a9bc2e30ce8ef9b827ec8f44687ff
   languageName: node
   linkType: hard
 
@@ -1284,7 +1242,7 @@ __metadata:
     eslint-config-airbnb: ^19.0.4
     eslint-config-airbnb-typescript: ^17.0.0
     eslint-config-prettier: ^8.5.0
-    eslint-import-resolver-typescript: ^3.2.1
+    eslint-import-resolver-typescript: ^2.5.0
     eslint-plugin-eslint-comments: ^3.2.0
     eslint-plugin-i18next: ^6.0.0-4
     eslint-plugin-import: ^2.26.0
@@ -1331,21 +1289,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-import-resolver-typescript@npm:^3.2.1":
-  version: 3.2.1
-  resolution: "eslint-import-resolver-typescript@npm:3.2.1::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Feslint-import-resolver-typescript%2F-%2Feslint-import-resolver-typescript-3.2.1.tgz"
+"eslint-import-resolver-typescript@npm:^2.5.0":
+  version: 2.7.1
+  resolution: "eslint-import-resolver-typescript@npm:2.7.1::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Feslint-import-resolver-typescript%2F-%2Feslint-import-resolver-typescript-2.7.1.tgz"
   dependencies:
     debug: ^4.3.4
-    enhanced-resolve: ^5.10.0
-    get-tsconfig: ^4.1.0
-    globby: ^13.1.2
-    is-core-module: ^2.9.0
+    glob: ^7.2.0
     is-glob: ^4.0.3
-    synckit: ^0.7.1
+    resolve: ^1.22.0
+    tsconfig-paths: ^3.14.1
   peerDependencies:
     eslint: "*"
     eslint-plugin-import: "*"
-  checksum: 0b7cb50e325c06327370bc8eed0207381b185d0611a6c6b140a0d4a3909bf290b9d1321537b2bd2380adc955c9593f6c1a81d2864ecd9da47ebea12f3587c912
+  checksum: 1d81b657b1f73bf95b8f0b745c0305574b91630c1db340318f3ca8918e206fce20a933b95e7c419338cc4452cb80bb2b2d92acaf01b6aa315c78a332d832545c
   languageName: node
   linkType: hard
 
@@ -1764,19 +1720,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:^3.2.11":
-  version: 3.2.11
-  resolution: "fast-glob@npm:3.2.11::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Ffast-glob%2F-%2Ffast-glob-3.2.11.tgz"
-  dependencies:
-    "@nodelib/fs.stat": ^2.0.2
-    "@nodelib/fs.walk": ^1.2.3
-    glob-parent: ^5.1.2
-    merge2: ^1.3.0
-    micromatch: ^4.0.4
-  checksum: f473105324a7780a20c06de842e15ddbb41d3cb7e71d1e4fe6e8373204f22245d54f5ab9e2061e6a1c613047345954d29b022e0e76f5c28b1df9858179a0e6d7
-  languageName: node
-  linkType: hard
-
 "fast-glob@npm:^3.2.9":
   version: 3.2.11
   resolution: "fast-glob@npm:3.2.11"
@@ -1935,13 +1878,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"get-tsconfig@npm:^4.1.0":
-  version: 4.1.0
-  resolution: "get-tsconfig@npm:4.1.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fget-tsconfig%2F-%2Fget-tsconfig-4.1.0.tgz"
-  checksum: a1a29cdf53609a1e9e111bf863ea209494c03e425964ed2603e3a2657ed1d38213d4a8e3efbfd945f2ec908fe99b76d3ee87422fac5d8ec4fdd858bbb502efbf
-  languageName: node
-  linkType: hard
-
 "glob-parent@npm:^5.1.2":
   version: 5.1.2
   resolution: "glob-parent@npm:5.1.2"
@@ -1974,6 +1910,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"glob@npm:^7.2.0":
+  version: 7.2.3
+  resolution: "glob@npm:7.2.3::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fglob%2F-%2Fglob-7.2.3.tgz"
+  dependencies:
+    fs.realpath: ^1.0.0
+    inflight: ^1.0.4
+    inherits: 2
+    minimatch: ^3.1.1
+    once: ^1.3.0
+    path-is-absolute: ^1.0.0
+  checksum: 29452e97b38fa704dabb1d1045350fb2467cf0277e155aa9ff7077e90ad81d1ea9d53d3ee63bd37c05b09a065e90f16aec4a65f5b8de401d1dac40bc5605d133
+  languageName: node
+  linkType: hard
+
 "globals@npm:^11.1.0":
   version: 11.12.0
   resolution: "globals@npm:11.12.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fglobals%2F-%2Fglobals-11.12.0.tgz"
@@ -1990,13 +1940,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globalyzer@npm:0.1.0":
-  version: 0.1.0
-  resolution: "globalyzer@npm:0.1.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fglobalyzer%2F-%2Fglobalyzer-0.1.0.tgz"
-  checksum: 419a0f95ba542534fac0842964d31b3dc2936a479b2b1a8a62bad7e8b61054faa9b0a06ad9f2e12593396b9b2621cac93358d9b3071d33723fb1778608d358a1
-  languageName: node
-  linkType: hard
-
 "globby@npm:^11.1.0":
   version: 11.1.0
   resolution: "globby@npm:11.1.0"
@@ -2008,33 +1951,6 @@ __metadata:
     merge2: ^1.4.1
     slash: ^3.0.0
   checksum: b4be8885e0cfa018fc783792942d53926c35c50b3aefd3fdcfb9d22c627639dc26bd2327a40a0b74b074100ce95bb7187bfeae2f236856aa3de183af7a02aea6
-  languageName: node
-  linkType: hard
-
-"globby@npm:^13.1.2":
-  version: 13.1.2
-  resolution: "globby@npm:13.1.2::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fglobby%2F-%2Fglobby-13.1.2.tgz"
-  dependencies:
-    dir-glob: ^3.0.1
-    fast-glob: ^3.2.11
-    ignore: ^5.2.0
-    merge2: ^1.4.1
-    slash: ^4.0.0
-  checksum: c148fcda0c981f00fb434bb94ca258f0a9d23cedbde6fb3f37098e1abde5b065019e2c63fe2aa2fad4daf2b54bf360b4d0423d85fb3a63d09ed75a2837d4de0f
-  languageName: node
-  linkType: hard
-
-"globrex@npm:^0.1.2":
-  version: 0.1.2
-  resolution: "globrex@npm:0.1.2::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fglobrex%2F-%2Fglobrex-0.1.2.tgz"
-  checksum: adca162494a176ce9ecf4dd232f7b802956bb1966b37f60c15e49d2e7d961b66c60826366dc2649093cad5a0d69970cfa8875bd1695b5a1a2f33dcd2aa88da3c
-  languageName: node
-  linkType: hard
-
-"graceful-fs@npm:^4.2.4":
-  version: 4.2.10
-  resolution: "graceful-fs@npm:4.2.10::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fgraceful-fs%2F-%2Fgraceful-fs-4.2.10.tgz"
-  checksum: 3f109d70ae123951905d85032ebeae3c2a5a7a997430df00ea30df0e3a6c60cf6689b109654d6fdacd28810a053348c4d14642da1d075049e6be1ba5216218da
   languageName: node
   linkType: hard
 
@@ -2273,15 +2189,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-docker@npm:^2.0.0, is-docker@npm:^2.1.1":
-  version: 2.2.1
-  resolution: "is-docker@npm:2.2.1::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fis-docker%2F-%2Fis-docker-2.2.1.tgz"
-  bin:
-    is-docker: cli.js
-  checksum: 3fef7ddbf0be25958e8991ad941901bf5922ab2753c46980b60b05c1bf9c9c2402d35e6dc32e4380b980ef5e1970a5d9d5e5aa2e02d77727c3b6b5e918474c56
-  languageName: node
-  linkType: hard
-
 "is-extglob@npm:^2.1.1":
   version: 2.1.1
   resolution: "is-extglob@npm:2.1.1"
@@ -2392,15 +2299,6 @@ __metadata:
   version: 1.0.4
   resolution: "is-word-character@npm:1.0.4::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fis-word-character%2F-%2Fis-word-character-1.0.4.tgz"
   checksum: 1821d6c6abe5bc0b3abe3fdc565d66d7c8a74ea4e93bc77b4a47d26e2e2a306d6ab7d92b353b0d2b182869e3ecaa8f4a346c62d0e31d38ebc0ceaf7cae182c3f
-  languageName: node
-  linkType: hard
-
-"is-wsl@npm:^2.2.0":
-  version: 2.2.0
-  resolution: "is-wsl@npm:2.2.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fis-wsl%2F-%2Fis-wsl-2.2.0.tgz"
-  dependencies:
-    is-docker: ^2.0.0
-  checksum: 20849846ae414997d290b75e16868e5261e86ff5047f104027026fd61d8b5a9b0b3ade16239f35e1a067b3c7cc02f70183cb661010ed16f4b6c7c93dad1b19d8
   languageName: node
   linkType: hard
 
@@ -3104,17 +3002,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"open@npm:^8.4.0":
-  version: 8.4.0
-  resolution: "open@npm:8.4.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fopen%2F-%2Fopen-8.4.0.tgz"
-  dependencies:
-    define-lazy-prop: ^2.0.0
-    is-docker: ^2.1.1
-    is-wsl: ^2.2.0
-  checksum: e9545bec64cdbf30a0c35c1bdc310344adf8428a117f7d8df3c0af0a0a24c513b304916a6d9b11db0190ff7225c2d578885080b761ed46a3d5f6f1eebb98b63c
-  languageName: node
-  linkType: hard
-
 "optionator@npm:^0.9.1":
   version: 0.9.1
   resolution: "optionator@npm:0.9.1"
@@ -3253,13 +3140,6 @@ __metadata:
   version: 4.0.0
   resolution: "path-type@npm:4.0.0"
   checksum: 5b1e2daa247062061325b8fdbfd1fb56dde0a448fb1455453276ea18c60685bdad23a445dc148cf87bc216be1573357509b7d4060494a6fd768c7efad833ee45
-  languageName: node
-  linkType: hard
-
-"picocolors@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "picocolors@npm:1.0.0"
-  checksum: a2e8092dd86c8396bdba9f2b5481032848525b3dc295ce9b57896f931e63fc16f79805144321f72976383fc249584672a75cc18d6777c6b757603f372f745981
   languageName: node
   linkType: hard
 
@@ -3692,13 +3572,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"slash@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "slash@npm:4.0.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fslash%2F-%2Fslash-4.0.0.tgz"
-  checksum: da8e4af73712253acd21b7853b7e0dbba776b786e82b010a5bfc8b5051a1db38ed8aba8e1e8f400dd2c9f373be91eb1c42b66e91abb407ff42b10feece5e1d2d
-  languageName: node
-  linkType: hard
-
 "source-map@npm:^0.5.0":
   version: 0.5.7
   resolution: "source-map@npm:0.5.7::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fsource-map%2F-%2Fsource-map-0.5.7.tgz"
@@ -3863,37 +3736,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"synckit@npm:^0.7.1":
-  version: 0.7.2
-  resolution: "synckit@npm:0.7.2::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fsynckit%2F-%2Fsynckit-0.7.2.tgz"
-  dependencies:
-    "@pkgr/utils": ^2.2.0
-    tslib: ^2.4.0
-  checksum: 09734631b1e66e24a06a104e4d058f7301d11ff8b6c5a9aab55a878879b9c50d1d9a05ff25624da05481fcac9be19cfa0e712d10d7978831d40955ad10ea28c9
-  languageName: node
-  linkType: hard
-
-"tapable@npm:^2.2.0":
-  version: 2.2.1
-  resolution: "tapable@npm:2.2.1::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Ftapable%2F-%2Ftapable-2.2.1.tgz"
-  checksum: 3b7a1b4d86fa940aad46d9e73d1e8739335efd4c48322cb37d073eb6f80f5281889bf0320c6d8ffcfa1a0dd5bfdbd0f9d037e252ef972aca595330538aac4d51
-  languageName: node
-  linkType: hard
-
 "text-table@npm:^0.2.0":
   version: 0.2.0
   resolution: "text-table@npm:0.2.0"
   checksum: b6937a38c80c7f84d9c11dd75e49d5c44f71d95e810a3250bd1f1797fc7117c57698204adf676b71497acc205d769d65c16ae8fa10afad832ae1322630aef10a
-  languageName: node
-  linkType: hard
-
-"tiny-glob@npm:^0.2.9":
-  version: 0.2.9
-  resolution: "tiny-glob@npm:0.2.9::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Ftiny-glob%2F-%2Ftiny-glob-0.2.9.tgz"
-  dependencies:
-    globalyzer: 0.1.0
-    globrex: ^0.1.2
-  checksum: aea5801eb6663ddf77ebb74900b8f8bd9dfcfc9b6a1cc8018cb7421590c00bf446109ff45e4b64a98e6c95ddb1255a337a5d488fb6311930e2a95334151ec9c6
   languageName: node
   linkType: hard
 
@@ -3953,7 +3799,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.3.1, tslib@npm:^2.4.0":
+"tslib@npm:^2.3.1":
   version: 2.4.0
   resolution: "tslib@npm:2.4.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Ftslib%2F-%2Ftslib-2.4.0.tgz"
   checksum: 8c4aa6a3c5a754bf76aefc38026134180c053b7bd2f81338cb5e5ebf96fefa0f417bff221592bf801077f5bf990562f6264fecbc42cd3309b33872cb6fc3b113

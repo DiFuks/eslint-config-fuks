@@ -74,6 +74,7 @@ module.exports = {
         },
       },
     ],
+    'unicorn/prefer-top-level-await': ['off'],
     'arrow-body-style': ['error', 'as-needed'],
     curly: ['error', 'all'],
     'import/no-extraneous-dependencies': [
