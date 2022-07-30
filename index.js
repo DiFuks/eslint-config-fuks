@@ -5,6 +5,14 @@ module.exports = {
     commonjs: true,
     node: true,
   },
+  ignorePatterns: [
+    'dist',
+    'public',
+    'var',
+    '__migration__',
+    '.eslintrc.json',
+    'node_modules',
+  ],
   parser: '@typescript-eslint/parser',
   plugins: [
     'prefer-arrow',
