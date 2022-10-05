@@ -373,6 +373,7 @@ module.exports = {
         'sonarjs/no-duplicate-string': 'off',
         'unicorn/numeric-separators-style': 'off',
         'unicorn/filename-case': 'off',
+        'no-template-curly-in-string': 'off',
         quotes: 'off',
       },
     },
