@@ -244,7 +244,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['*.ts', '*.tsx'],
+      files: ['*.ts', '*.tsx', '*.vue'],
       extends: [
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
       ],
@@ -393,6 +393,14 @@ module.exports = {
         '@typescript-eslint/explicit-function-return-type': ['off'],
         'jsdoc/require-jsdoc': ['off'],
         'i18next/no-literal-string': ['off'],
+      },
+    },
+    {
+      files: ['*.vue'],
+      parser: 'vue-eslint-parser',
+      parserOptions: {
+        parser: '@typescript-eslint/parser',
+        extraFileExtensions: ['.vue'],
       },
     },
   ],

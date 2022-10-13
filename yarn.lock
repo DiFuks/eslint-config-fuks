@@ -1054,6 +1054,7 @@ __metadata:
     prettier: ^2.7.1
     prettier-plugin-jsdoc: ^0.4.2
     typescript: ^4.8.3
+    vue-eslint-parser: ^9.1.0
   peerDependencies:
     eslint: ^8.5.0
     prettier: ^2.5.0
@@ -1459,7 +1460,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"espree@npm:^9.4.0":
+"espree@npm:^9.3.1, espree@npm:^9.4.0":
   version: 9.4.0
   resolution: "espree@npm:9.4.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fespree%2F-%2Fespree-9.4.0.tgz"
   dependencies:
@@ -3587,6 +3588,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"semver@npm:^7.3.6":
+  version: 7.3.8
+  resolution: "semver@npm:7.3.8::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fsemver%2F-%2Fsemver-7.3.8.tgz"
+  dependencies:
+    lru-cache: ^6.0.0
+  bin:
+    semver: bin/semver.js
+  checksum: ba9c7cbbf2b7884696523450a61fee1a09930d888b7a8d7579025ad93d459b2d1949ee5bbfeb188b2be5f4ac163544c5e98491ad6152df34154feebc2cc337c1
+  languageName: node
+  linkType: hard
+
 "semver@npm:^7.3.7":
   version: 7.3.7
   resolution: "semver@npm:7.3.7"
@@ -4083,6 +4095,23 @@ __metadata:
     unist-util-stringify-position: ^3.0.0
     vfile-message: ^3.0.0
   checksum: 14a9ea19d1801bb99fc9a451d220d2ee84d891bae52094db660f9bf637c1cada0c45a3e00962ff3e901da16dd5051367e25a4a214e40db57ae40f57363796b45
+  languageName: node
+  linkType: hard
+
+"vue-eslint-parser@npm:^9.1.0":
+  version: 9.1.0
+  resolution: "vue-eslint-parser@npm:9.1.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fvue-eslint-parser%2F-%2Fvue-eslint-parser-9.1.0.tgz"
+  dependencies:
+    debug: ^4.3.4
+    eslint-scope: ^7.1.1
+    eslint-visitor-keys: ^3.3.0
+    espree: ^9.3.1
+    esquery: ^1.4.0
+    lodash: ^4.17.21
+    semver: ^7.3.6
+  peerDependencies:
+    eslint: ">=6.0.0"
+  checksum: e2e6b05989294c4439d91283a78a0cb444cfba30f2715a5be1950d7815cadb5c8f449d9362a92bdd163cb8944abaac73bb076ce3c27b27586eaa4560002e6dfd
   languageName: node
   linkType: hard
 

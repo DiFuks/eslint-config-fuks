@@ -42,7 +42,8 @@
     "eslint-plugin-styled-components-varname": "^1.0.1",
     "eslint-plugin-unicorn": "^43.0.2",
     "prettier": "^2.7.1",
-    "prettier-plugin-jsdoc": "^0.4.2"
+    "prettier-plugin-jsdoc": "^0.4.2",
+    "vue-eslint-parser": "^9.1.0"
   },
   "dependenciesComments": {
     "eslint-import-resolver-typescript": "Upgrade to v3 after fix https://github.com/import-js/eslint-import-resolver-typescript/issues/130"
