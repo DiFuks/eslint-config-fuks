@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 module.exports = {
   env: {
     browser: true,
@@ -5,7 +6,6 @@ module.exports = {
     commonjs: true,
     node: true,
   },
-  parser: '@typescript-eslint/parser',
   plugins: [
     'prefer-arrow',
     'styled-components-varname',
@@ -20,12 +20,11 @@ module.exports = {
     'airbnb',
     'airbnb/hooks',
     'plugin:unicorn/recommended',
-    'plugin:prettier/recommended',
     'airbnb-typescript',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:i18next/recommended',
-    'prettier',
+    'plugin:prettier/recommended',
   ],
   settings: {
     'import/parsers': {
@@ -331,7 +330,7 @@ module.exports = {
     },
     {
       files: ['*.mdx'],
-      extends: ['plugin:mdx/recommended'],
+      extends: ['plugin:mdx/recommended', 'prettier'],
       rules: {
         '@typescript-eslint/dot-notation': 'off',
         '@typescript-eslint/naming-convention': 'off',
@@ -342,20 +341,6 @@ module.exports = {
         'sonarjs/no-duplicate-string': 'off',
         'newline-after-var': 'off',
         'newline-before-return': 'off',
-        'prettier/prettier': [
-          'error',
-          {
-            singleQuote: true,
-            trailingComma: 'all',
-            jsxSingleQuote: true,
-            tabWidth: 2,
-            jsdocSingleLineComment: false,
-            plugins: ['prettier-plugin-jsdoc'],
-          },
-          {
-            usePrettierrc: false,
-          },
-        ],
         '@typescript-eslint/no-use-before-define': 'off',
         '@typescript-eslint/no-floating-promises': 'off',
       },
@@ -398,6 +383,7 @@ module.exports = {
     {
       files: ['*.vue'],
       parser: 'vue-eslint-parser',
+      extends: ['plugin:vue/vue3-recommended', 'prettier'],
       parserOptions: {
         parser: '@typescript-eslint/parser',
         extraFileExtensions: ['.vue'],
@@ -405,3 +391,4 @@ module.exports = {
     },
   ],
 };
+/* eslint-enable sonarjs/no-duplicate-string */
