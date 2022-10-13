@@ -1,3 +1,5 @@
+const tsParser = require('@typescript-eslint/parser');
+
 /* eslint-disable sonarjs/no-duplicate-string */
 module.exports = {
   env: {
@@ -385,7 +387,7 @@ module.exports = {
       parser: 'vue-eslint-parser',
       extends: ['plugin:vue/vue3-recommended', 'prettier'],
       parserOptions: {
-        parser: '@typescript-eslint/parser',
+        parser: tsParser,
         extraFileExtensions: ['.vue'],
       },
     },
