@@ -191,6 +191,14 @@ module.exports = {
         publicOnly: true,
       },
     ],
+    'i18next/no-literal-string': [
+      'error',
+      {
+        words: {
+          exclude: ['[: ]+'],
+        },
+      },
+    ],
     '@typescript-eslint/naming-convention': [
       'error',
       {
