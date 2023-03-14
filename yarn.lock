@@ -1194,7 +1194,7 @@ __metadata:
     eslint-config-airbnb: ^19.0.4
     eslint-config-airbnb-typescript: ^17.0.0
     eslint-config-prettier: ^8.7.0
-    eslint-import-resolver-typescript: ^3.5.3
+    eslint-import-resolver-typescript: 3.5.1
     eslint-plugin-eslint-comments: ^3.2.0
     eslint-plugin-i18next: ^6.0.0-6
     eslint-plugin-import: ^2.27.5
@@ -1244,9 +1244,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-import-resolver-typescript@npm:^3.5.3":
-  version: 3.5.3
-  resolution: "eslint-import-resolver-typescript@npm:3.5.3::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Feslint-import-resolver-typescript%2F-%2Feslint-import-resolver-typescript-3.5.3.tgz"
+"eslint-import-resolver-typescript@npm:3.5.1":
+  version: 3.5.1
+  resolution: "eslint-import-resolver-typescript@npm:3.5.1::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Feslint-import-resolver-typescript%2F-%2Feslint-import-resolver-typescript-3.5.1.tgz"
   dependencies:
     debug: ^4.3.4
     enhanced-resolve: ^5.10.0
@@ -1254,11 +1254,11 @@ __metadata:
     globby: ^13.1.2
     is-core-module: ^2.10.0
     is-glob: ^4.0.3
-    synckit: ^0.8.4
+    synckit: ^0.8.3
   peerDependencies:
     eslint: "*"
     eslint-plugin-import: "*"
-  checksum: 63b5f28bec5a29b1d3be33b79795441f7b0da54479e5c99a115877d9b70b2b7464c19a928b4ae7674a937b9ee8e7d4b1d30b7f5e6325c4c3aaa8c607bb175258
+  checksum: d7a7a33c9fd8b52ae25bd432c3e0b157a9c38d1254325311e04f450083197d47d823ebca447e7b5bfe9b9a959de8d2edbafb028406c2532fd7aa95fe31812a48
   languageName: node
   linkType: hard
 
@@ -4271,6 +4271,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"synckit@npm:^0.8.3":
+  version: 0.8.5
+  resolution: "synckit@npm:0.8.5::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fsynckit%2F-%2Fsynckit-0.8.5.tgz"
+  dependencies:
+    "@pkgr/utils": ^2.3.1
+    tslib: ^2.5.0
+  checksum: 8a9560e5d8f3d94dc3cf5f7b9c83490ffa30d320093560a37b88f59483040771fd1750e76b9939abfbb1b5a23fd6dfbae77f6b338abffe7cae7329cd9b9bb86b
+  languageName: node
+  linkType: hard
+
 "synckit@npm:^0.8.4":
   version: 0.8.4
   resolution: "synckit@npm:0.8.4::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fsynckit%2F-%2Fsynckit-0.8.4.tgz"
@@ -4344,6 +4354,13 @@ __metadata:
   version: 2.4.0
   resolution: "tslib@npm:2.4.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Ftslib%2F-%2Ftslib-2.4.0.tgz"
   checksum: 8c4aa6a3c5a754bf76aefc38026134180c053b7bd2f81338cb5e5ebf96fefa0f417bff221592bf801077f5bf990562f6264fecbc42cd3309b33872cb6fc3b113
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^2.5.0":
+  version: 2.5.0
+  resolution: "tslib@npm:2.5.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Ftslib%2F-%2Ftslib-2.5.0.tgz"
+  checksum: ae3ed5f9ce29932d049908ebfdf21b3a003a85653a9a140d614da6b767a93ef94f460e52c3d787f0e4f383546981713f165037dc2274df212ea9f8a4541004e1
   languageName: node
   linkType: hard
 
