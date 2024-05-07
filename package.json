@@ -1,58 +1,53 @@
 {
   "name": "eslint-config-fuks",
-  "version": "1.10.1",
+  "version": "2.0.0",
   "main": "index.js",
   "author": "Dmitry Fuks",
   "license": "ISC",
   "repository": "https://github.com/DiFuks/eslint-config-fuks",
   "files": [
     "index.js",
-    "readme.md",
-    "resolver.js",
+    "README.md",
     "tsconfig.json"
   ],
   "keywords": [
     "eslint"
   ],
   "devDependencies": {
-    "eslint": "^8.36.0",
-    "prettier": "^2.8.4",
-    "typescript": "^4.9.5"
+    "eslint": "8.36.0",
+    "typescript": "5.3.3"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.55.0",
-    "@typescript-eslint/parser": "^5.55.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-typescript": "^17.0.0",
-    "eslint-config-prettier": "^8.7.0",
-    "eslint-import-resolver-typescript": "3.5.1",
-    "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-i18next": "^6.0.0-6",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-jsdoc": "^40.0.2",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-mdx": "^2.0.5",
-    "eslint-plugin-no-relative-imports": "https://github.com/MatthewBurstein/eslint-plugin-no-relative-imports.git#commit=439e191a30eb8cde0ea5a98164f6339a8819a21f",
-    "eslint-plugin-prefer-arrow": "^1.2.3",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-react": "^7.32.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-sonarjs": "^0.18.0",
-    "eslint-plugin-styled-components-varname": "^1.0.1",
-    "eslint-plugin-unicorn": "^46.0.0",
-    "eslint-plugin-vue": "^9.9.0",
-    "prettier": "^2.8.4",
-    "prettier-plugin-jsdoc": "^0.4.2",
-    "vue-eslint-parser": "^9.1.0"
-  },
-  "dependenciesComments": {
-    "eslint-import-resolver-typescript": "Upgrade to v3 after fix https://github.com/import-js/eslint-import-resolver-typescript/issues/130"
+    "@feature-sliced/eslint-config": "0.1.1",
+    "@typescript-eslint/eslint-plugin": "6.13.2",
+    "@typescript-eslint/parser": "6.13.2",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-airbnb-typescript": "17.1.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-import-resolver-typescript": "3.6.1",
+    "eslint-plugin-boundaries": "4.0.1",
+    "eslint-plugin-i18next": "6.0.3",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-jest": "27.6.0",
+    "eslint-plugin-json": "3.1.0",
+    "eslint-plugin-jsx-a11y": "6.8.0",
+    "eslint-plugin-optimize-regex": "1.2.1",
+    "eslint-plugin-prefer-arrow-functions": "3.2.4",
+    "eslint-plugin-prettier": "5.0.1",
+    "eslint-plugin-promise": "6.1.1",
+    "eslint-plugin-react": "7.33.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "eslint-plugin-simple-import-sort": "10.0.0",
+    "eslint-plugin-sonarjs": "0.23.0",
+    "eslint-plugin-storybook": "0.6.15",
+    "eslint-plugin-styled-components-varname": "1.0.1",
+    "eslint-plugin-testing-library": "6.2.0",
+    "eslint-plugin-vitest": "0.3.10",
+    "prettier": "3.1.0"
   },
   "peerDependencies": {
-    "eslint": "^8.5.0",
-    "prettier": "^2.5.0",
-    "typescript": "^4.6.3"
+    "eslint": ">=8.0.0",
+    "typescript": ">=5.0.0"
   },
-  "packageManager": "yarn@3.2.1"
+  "packageManager": "yarn@4.2.1"
 }
