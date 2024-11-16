@@ -1639,7 +1639,7 @@ __metadata:
     eslint-config-airbnb-typescript: "npm:18.0.0"
     eslint-config-prettier: "npm:9.1.0"
     eslint-import-resolver-typescript: "npm:3.6.1"
-    eslint-plugin-boundaries: "npm:4.2.2"
+    eslint-plugin-boundaries: "npm:5.0.1"
     eslint-plugin-i18next: "npm:6.0.9"
     eslint-plugin-import: "npm:2.29.1"
     eslint-plugin-jest: "npm:28.6.0"
@@ -1707,15 +1707,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-module-utils@npm:2.8.1, eslint-module-utils@npm:^2.8.0":
-  version: 2.8.1
-  resolution: "eslint-module-utils@npm:2.8.1::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Feslint-module-utils%2F-%2Feslint-module-utils-2.8.1.tgz"
+"eslint-module-utils@npm:2.12.0":
+  version: 2.12.0
+  resolution: "eslint-module-utils@npm:2.12.0::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Feslint-module-utils%2F-%2Feslint-module-utils-2.12.0.tgz"
   dependencies:
     debug: "npm:^3.2.7"
   peerDependenciesMeta:
     eslint:
       optional: true
-  checksum: 10/3e7892c0a984c963632da56b30ccf8254c29b535467138f91086c2ecdb2ebd10e2be61b54e553f30e5abf1d14d47a7baa0dac890e3a658fd3cd07dca63afbe6d
+  checksum: 10/dd27791147eca17366afcb83f47d6825b6ce164abb256681e5de4ec1d7e87d8605641eb869298a0dbc70665e2446dbcc2f40d3e1631a9475dd64dd23d4ca5dee
   languageName: node
   linkType: hard
 
@@ -1731,17 +1731,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-boundaries@npm:4.2.2":
-  version: 4.2.2
-  resolution: "eslint-plugin-boundaries@npm:4.2.2::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Feslint-plugin-boundaries%2F-%2Feslint-plugin-boundaries-4.2.2.tgz"
+"eslint-module-utils@npm:^2.8.0":
+  version: 2.8.1
+  resolution: "eslint-module-utils@npm:2.8.1::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Feslint-module-utils%2F-%2Feslint-module-utils-2.8.1.tgz"
+  dependencies:
+    debug: "npm:^3.2.7"
+  peerDependenciesMeta:
+    eslint:
+      optional: true
+  checksum: 10/3e7892c0a984c963632da56b30ccf8254c29b535467138f91086c2ecdb2ebd10e2be61b54e553f30e5abf1d14d47a7baa0dac890e3a658fd3cd07dca63afbe6d
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-boundaries@npm:5.0.1":
+  version: 5.0.1
+  resolution: "eslint-plugin-boundaries@npm:5.0.1::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Feslint-plugin-boundaries%2F-%2Feslint-plugin-boundaries-5.0.1.tgz"
   dependencies:
     chalk: "npm:4.1.2"
     eslint-import-resolver-node: "npm:0.3.9"
-    eslint-module-utils: "npm:2.8.1"
-    micromatch: "npm:4.0.7"
+    eslint-module-utils: "npm:2.12.0"
+    micromatch: "npm:4.0.8"
   peerDependencies:
     eslint: ">=6.0.0"
-  checksum: 10/bf5eeb707447820c29c62325e110a02eedb1da42a7d05a6a19b543931c3412b8b755d6a818fbbc2d4f531889d4c6ce2d035cb2a65fc6d780827ed910d29c4486
+  checksum: 10/fe94d152e6eef02b4769d3f9ba4cde1067e2c1da58c78072fe7cce2282f71ba2ee7084bde1a4ed3e0abf04d74b9f6bd2a61615aedde71682e982dd3734bd7006
   languageName: node
   linkType: hard
 
@@ -3130,13 +3142,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"micromatch@npm:4.0.7":
-  version: 4.0.7
-  resolution: "micromatch@npm:4.0.7::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fmicromatch%2F-%2Fmicromatch-4.0.7.tgz"
+"micromatch@npm:4.0.8":
+  version: 4.0.8
+  resolution: "micromatch@npm:4.0.8::__archiveUrl=https%3A%2F%2Fregistry.npmjs.org%2Fmicromatch%2F-%2Fmicromatch-4.0.8.tgz"
   dependencies:
     braces: "npm:^3.0.3"
     picomatch: "npm:^2.3.1"
-  checksum: 10/a11ed1cb67dcbbe9a5fc02c4062cf8bb0157d73bf86956003af8dcfdf9b287f9e15ec0f6d6925ff6b8b5b496202335e497b01de4d95ef6cf06411bc5e5c474a0
+  checksum: 10/6bf2a01672e7965eb9941d1f02044fad2bd12486b5553dc1116ff24c09a8723157601dc992e74c911d896175918448762df3b3fd0a6b61037dd1a9766ddfbf58
   languageName: node
   linkType: hard
 

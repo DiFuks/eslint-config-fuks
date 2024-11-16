@@ -27,7 +27,7 @@
     "eslint-config-airbnb-typescript": "18.0.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-import-resolver-typescript": "3.6.1",
-    "eslint-plugin-boundaries": "4.2.2",
+    "eslint-plugin-boundaries": "5.0.1",
     "eslint-plugin-i18next": "6.0.9",
     "eslint-plugin-import": "2.29.1",
     "eslint-plugin-jest": "28.6.0",
